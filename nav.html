@@ -30,6 +30,12 @@
         <a href="index.html" style="display: block; margin-bottom: 20px;">
             Главная
         </a>
+        <a href="template.html" style="display: block; margin-bottom: 20px;">
+            Шаблон
+        </a>
+        <a href="showroom.html" style="display: block; margin-bottom: 20px;">
+            Шоурум
+        </a>
         <a href="faq.html" style="display: block; margin-bottom: 20px;">
             Вопрос-Ответ
         </a>
@@ -40,27 +46,53 @@
 
 
 
-        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#quickOrder">
-            Быстрый заказ
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-modal="consultModal">
+            Оставьте ваши данные
+            и мы свяжемся с вами
         </button>
 
     </div>
 
-    <div class="modal" id="quickOrder" aria-hidden="true">
-    <div class="modal-dialog">
-        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55401 10.5L2 2.94599L2.94599 2L10.5 9.55401L18.054 2L19 2.94599L11.446 10.5L19 18.054L18.054 19L10.5 11.446L2.94599 19L2 18.054L9.55401 10.5Z" fill="#333333"/>
+    <div class="modal" id="consultModal">
+    <div class="modal__bg _close-modal"></div>
+    <div class="modal__dialog">
+        <button class="modal__close _close-modal">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="24.1844" y1="4.38092" x2="4.5277" y2="24.3211" stroke="#A4A4A4" stroke-width="3"/>
+                <line x1="23.6191" y1="24.1844" x2="3.67886" y2="4.5277" stroke="#A4A4A4" stroke-width="3"/>
             </svg>
         </button>
-
-
-
+        <div class="modal__scroll">
+            <div class="text28 bold-text">
+                Оставьте ваши данные
+                и мы свяжемся с вами
+            </div>
+            <form action="" class="modal-form">
+                <fieldset class="fg">
+                    <label class="text17">Ваше имя*</label>
+                    <input type="text" placeholder="Имя">
+                </fieldset>
+                <fieldset class="fg">
+                    <label class="text17">Ваш телефон*</label>
+                    <input type="text" placeholder="+7 900 123 00 00">
+                </fieldset>
+                <fieldset class="fg">
+                    <label class="text17">Ваша почта</label>
+                    <input type="text" placeholder="Example@mail.ru">
+                </fieldset>
+                <button class="modal-form__btn m-btn m-btn-black">
+                    <span>Рассчитать стоимость</span>
+                </button>
+                <div class="modal-form__hint">
+                    <div class="text14 gray-text"> *обязательные поля</div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
 
-<!-- <div class="modal-backdrop show"></div> -->
+
     <!--  -->
     <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
